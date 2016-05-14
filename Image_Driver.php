@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Image API driver.
  *
@@ -60,8 +61,7 @@ abstract class Image_Driver
             $geometry['top'] = floor(($height / 2) - ($geometry['height'] / 2));
         } elseif ($geometry['top'] === 'top') {
             $geometry['top'] = 0;
-        }
-        elseif ($geometry['top'] === 'bottom') {
+        } elseif ($geometry['top'] === 'bottom') {
             $geometry['top'] = $height - $geometry['height'];
         }
 
@@ -70,8 +70,7 @@ abstract class Image_Driver
             $geometry['left'] = floor(($width / 2) - ($geometry['width'] / 2));
         } elseif ($geometry['left'] === 'left') {
             $geometry['left'] = 0;
-        }
-        elseif ($geometry['left'] === 'right') {
+        } elseif ($geometry['left'] === 'right') {
             $geometry['left'] = $width - $geometry['height'];
         }
 

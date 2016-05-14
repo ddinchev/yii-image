@@ -209,7 +209,7 @@ class Image_GD_Driver extends Image_Driver
         }
 
         // Recalculate the width and height, if they are missing
-        empty($properties['width'])  and $properties['width'] = round($width * $properties['height'] / $height);
+        empty($properties['width']) and $properties['width'] = round($width * $properties['height'] / $height);
         empty($properties['height']) and $properties['height'] = round($height * $properties['width'] / $width);
 
         if ($properties['master'] === Image::AUTO) {
@@ -361,11 +361,11 @@ class Image_GD_Driver extends Image_Driver
             self::$blank_png = imagecreatefromstring(base64_decode
             (
                 'iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29' .
-                    'mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADqSURBVHjaYvz//z/DYAYAAcTEMMgBQAANegcCBN' .
-                    'CgdyBAAA16BwIE0KB3IEAADXoHAgTQoHcgQAANegcCBNCgdyBAAA16BwIE0KB3IEAADXoHAgTQoHcgQ' .
-                    'AANegcCBNCgdyBAAA16BwIE0KB3IEAADXoHAgTQoHcgQAANegcCBNCgdyBAAA16BwIE0KB3IEAADXoH' .
-                    'AgTQoHcgQAANegcCBNCgdyBAAA16BwIE0KB3IEAADXoHAgTQoHcgQAANegcCBNCgdyBAAA16BwIE0KB' .
-                    '3IEAADXoHAgTQoHcgQAANegcCBNCgdyBAgAEAMpcDTTQWJVEAAAAASUVORK5CYII='
+                'mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADqSURBVHjaYvz//z/DYAYAAcTEMMgBQAANegcCBN' .
+                'CgdyBAAA16BwIE0KB3IEAADXoHAgTQoHcgQAANegcCBNCgdyBAAA16BwIE0KB3IEAADXoHAgTQoHcgQ' .
+                'AANegcCBNCgdyBAAA16BwIE0KB3IEAADXoHAgTQoHcgQAANegcCBNCgdyBAAA16BwIE0KB3IEAADXoH' .
+                'AgTQoHcgQAANegcCBNCgdyBAAA16BwIE0KB3IEAADXoHAgTQoHcgQAANegcCBNCgdyBAAA16BwIE0KB' .
+                '3IEAADXoHAgTQoHcgQAANegcCBNCgdyBAgAEAMpcDTTQWJVEAAAAASUVORK5CYII='
             ));
 
             // Set the blank PNG width and height
@@ -389,21 +389,21 @@ class Image_GD_Driver extends Image_Driver
     {
         $path = $params['path'];
         $mark = imagecreatefrompng($path);
-        if(isset($params['x'])){
+        if (isset($params['x'])) {
             $x = $params['x'];
-            if($x<0){
-                $x = imagesx($this->tmp_image)-imagesx($mark)+$x;
+            if ($x < 0) {
+                $x = imagesx($this->tmp_image) - imagesx($mark) + $x;
             }
         } else {
-            $x = (imagesx($this->tmp_image) - imagesx($mark))/2;
+            $x = (imagesx($this->tmp_image) - imagesx($mark)) / 2;
         }
-        if(isset($params['y'])){
+        if (isset($params['y'])) {
             $y = $params['y'];
-            if($y<0){
-                $y = imagesy($this->tmp_image)-imagesy($mark)+$y;
+            if ($y < 0) {
+                $y = imagesy($this->tmp_image) - imagesy($mark) + $y;
             }
         } else {
-            $y = (imagesy($this->tmp_image) - imagesy($mark))/2;
+            $y = (imagesy($this->tmp_image) - imagesy($mark)) / 2;
         }
         imagealphablending($this->tmp_image, true);
         imagesavealpha($this->tmp_image, true);

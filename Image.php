@@ -1,8 +1,8 @@
 <?php
 
-require 'Image_Driver.php';
-require 'drivers/Image_GD_Driver.php';
-require 'drivers/Image_ImageMagick_Driver.php';
+require_once dirname(__FILE__) . '/Image_Driver.php';
+require_once dirname(__FILE__) . '/drivers/Image_GD_Driver.php';
+require_once dirname(__FILE__) . '/drivers/Image_ImageMagick_Driver.php';
 
 /**
  * Manipulate images using standard methods such as resize, crop, rotate, etc.

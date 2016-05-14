@@ -1,5 +1,6 @@
 <?php
 
+require_once dirname(__FILE__) . '/Image.php';
 
 /**
  * Description of CImageComponent
@@ -40,5 +41,3 @@ class CImageComponent extends CApplicationComponent
         return new Image($image, $config);
     }
 }
-
-?>
